@@ -24,7 +24,7 @@ def index():
 
 ###### Adding items######
 @app.route('/run', methods =['POST'])
-def add():
+def run():
 	todo = Todo(text = request.form['todoitem'], complete = False)
 	db.session.add(todo)
 	db.session.commit()

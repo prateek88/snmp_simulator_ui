@@ -8,13 +8,23 @@
 </head>
 <body>
 	<h1>Simulate SNMP Switch to Test Profiler</h1>
-	<div>Add a new todo item:
+	<div>
 		<form action="{{ url_for('run') }}" method="POST">
-			<input type="text" name="todoitem">
-			<input type="submit" value="Add Item" class="button">
+			<select name="switch_type">
+				<option value="">--Select A switch Vendor--</option>
+				<option value="cisco">Cisco</option>
+				<option value="hp">HP</option>
+				<option value="juniper">Juniper</option>
+			<!-- <input type="text" name="todoitem"> -->
+			<input type="submit" value="Simulate" class="button">
 		</form>
 	</div>
-	<div>
+	<div class="started">
+		<h3>Started Switch simulator with below details:</h3>
+		<p>IP: </p>
+		<p>Community: </p>
+	</div>
+	<!-- <div>
 		<h2>Incomplete Items</h2>
 		<ul>
 			{% for todo in incomplete %}
@@ -27,6 +37,6 @@
 			<li style="font-size: 15pt">{{ todo.text }}</li>
 			{% endfor %}
 		</ul>
-	</div>
+	</div> -->
 </body>
 </html>
